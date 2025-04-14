@@ -62,6 +62,7 @@ header {
     transform: skewX(-10deg);
     display: inline-block;
     font-family: 'Sister Spray', sans-serif; /* Apply the custom font */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle drop shadow */
 }
 
 .logo img {
@@ -118,7 +119,7 @@ header {
     pointer-events: none; /* Optional: Prevent the text from interfering with clicks */
     -webkit-text-stroke: 1px white; /* Add a white border around the text */
     text-stroke: 1px white; /* Add a white border around the text */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional: Add a subtle glow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle drop shadow */
 }
 
 /* Remove the .side-gif class if it is no longer needed */
@@ -140,10 +141,15 @@ header {
     background-color: white;
     border-radius: 5px;
     overflow: hidden; /* Ensures content like images is clipped inside the card */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle drop shadow */
     position: relative; /* Allows child elements to be positioned absolutely */
     height: 250px; /* Set a fixed height for the card */
     width: 200px; /* Ensure consistent width */
+    transition: box-shadow 0.3s ease; /* Add a smooth transition for hover effects */
+}
+
+.product-card:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* Slightly increase shadow on hover */
 }
 
 .product-img {
@@ -151,6 +157,11 @@ header {
     height: 100%; /* Make the image fill the entire card */
     object-fit: cover; /* Ensures the image is clipped and scaled properly */
     object-position: center; /* Centers the image within the container */
+    transition: transform 0.3s ease; /* Add a smooth transition for the zoom effect */
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.1); /* Zoom in on the image */
 }
 
 .product-info {
