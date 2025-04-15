@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Title 8</title>
+    <title>Tool Application</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.min.js"></script>
+    <script src="app1.js"></script>
 </head>
 <body>
     <header>
@@ -16,12 +18,43 @@
     </header>
 
     <main>
-        <section class="product-detail">
-            <img src="assets/bg4.png" alt="Game 8" class="product-detail-img">
-            <h1 class="product-detail-title">Game Title 8</h1>
-            <p class="product-detail-description">
-                This is a detailed description of Game Title 8. Customize this content for each product.
+        <section class="tool-detail">
+            <h1 class="tool-detail-title">Tool Application</h1>
+            <p class="tool-detail-description">
+Please select whether you want to keep the full names of files, including extensions
+Decide whether to keep underscores in the file names or not.
+
+Select the root folder you want to use to extract the list from
+
+Aftter you've selected your options, press "Transform" and you'll get a Word file with the list of files in these folders.
             </p>
+
+            <!-- Toggle for full file names -->
+            <div class="toggle-container">
+                <label for="toggle-full-names">
+                    <input type="checkbox" id="toggle-full-names">
+                    Do you want full file names?
+                </label>
+            </div>
+
+            <!-- Toggle for keeping underscores -->
+            <div class="toggle-container">
+                <label for="toggle-keep-underscores">
+                    <input type="checkbox" id="toggle-keep-underscores">
+                    Keep _ ?
+                </label>
+            </div>
+
+            <!-- Folder selection -->
+            <div class="folder-selection">
+                <button id="select-folder" class="btn btn-primary">Select Folder</button>
+                <p id="selected-folder" class="folder-display">No folder selected</p>
+            </div>
+
+            <!-- Transform button -->
+            <div class="transform-action">
+                <button id="transform-button" class="btn btn-secondary">Transform</button>
+            </div>
         </section>
     </main>
 
